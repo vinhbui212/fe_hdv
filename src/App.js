@@ -1,20 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
 import { Route, Routes } from 'react-router-dom';
-import ProductDetail from './components/ProductDetail';
-import CartDetail from './components/Cart';
+import Admin from './components/Admin';
+import User from './components/User';
+import { GoogleLogin } from '@react-oauth/google';
+import Login1 from './components/Login';
+import LDAP from './components/LDAP';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-      
-      <Route path="/product/:id" element={<ProductDetail></ProductDetail>}/>
-      <Route path="" element={<Home></Home>}/>
-      <Route path="/cart" element={<CartDetail></CartDetail>}/>
-      
+      <Route path="/ldap" element={<LDAP></LDAP>}/>
+      <Route path="/login" element={<Login1></Login1>}/>
+      <Route path="/admin" element={<Admin></Admin>}/>
+      <Route path="/user" element={<User></User>}/>
       </Routes>
     </div>
   );
